@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fase 3</title>
+</head>
+
+<body>
+    <script>
+        let name = "MAGALI";
+        let nameArray = [];
+        let letterMap = new Map();
+
+        for (let i = 0; i < name.length; i++) {
+            nameArray.push(name[i].toLowerCase());
+        }
+        for (let i = 0; i < nameArray.length; i++) {
+            let letter = nameArray[i];
+            let counter = 0;
+
+            nameArray.forEach(character => {
+                if (character == letter) {
+                    counter++;
+                }
+            })
+            letterMap.set(letter, counter);
+        }
+        console.log(letterMap);
+    </script>
+
+</body>
