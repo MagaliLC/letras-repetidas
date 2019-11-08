@@ -10,34 +10,11 @@
 
 <body>
     <script>
-        let name = "MAGALI";
-        let surname = "LESCANO";
-        let nameArray = [];
-        let surnameArray = [];
-
-        let letterMap = new Map();
-
-        for (let i = 0; i < name.length; i++) {
-            nameArray.push(name[i].toLowerCase());
-        }
-
-        for (let i = 0; i < surname.length; i++) {
-            surnameArray.push(surname[i].toLowerCase());
-        }
+        let nameArray = ["M", "A", "G", "A", "L", "I"];
+        let surnameArray = ["L", "E", "S", "C", "A", "N", "O"];
+        let fullName = [];
         let fullname = nameArray.concat(" ", surnameArray);
-        for (let i = 0; i < fullname.length; i++) {
-            let letter = fullname[i];
-            let counter = 0;
-
-            fullname.forEach(character => {
-                if (character == letter) {
-                    counter++;
-                }
-            });
-
-            letterMap.set(letter, counter);
-        }
-        console.log(letterMap);
+        console.log(fullname);
     </script>
 
 </body>
