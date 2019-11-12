@@ -10,24 +10,15 @@
 
 <body>
     <script>
-        let name = "MAGALI";
-        let nameArray = [];
+        let nameArray = ["M", "A", "G", "A", "L", "I"];
         let letterMap = new Map();
 
-        for (let i = 0; i < name.length; i++) {
-            nameArray.push(name[i].toLowerCase());
-        }
         for (let i = 0; i < nameArray.length; i++) {
-            let letter = nameArray[i];
-            let counter = 0;
-
-            nameArray.forEach(character => {
-                if (character == letter) {
-                    counter++;
-                }
-            });
-
-            letterMap.set(letter, counter);
+            if (!(letterMap.has(nameArray[i]))) {
+                letterMap.set(nameArray[i], 1);
+            } else {
+                letterMap.set(nameArray[i], letterMap.get(nameArray[i]) + 1);
+            }
         }
         console.log(letterMap);
     </script>
